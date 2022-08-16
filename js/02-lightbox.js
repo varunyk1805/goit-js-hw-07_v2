@@ -14,8 +14,6 @@ const markup = galleryItems.map(({ preview, original, description }) =>
 )
     .join('');
 
-gallery.insertAdjacentHTML('beforeend', markup);
-
 const settingsSimpleLightbox = event => {
     event.preventDefault();
     gallery.removeEventListener('click', settingsSimpleLightbox);
@@ -28,4 +26,5 @@ const settingsSimpleLightbox = event => {
     );
 };
 
+gallery.insertAdjacentHTML('beforeend', markup);
 gallery.addEventListener('click', settingsSimpleLightbox);
